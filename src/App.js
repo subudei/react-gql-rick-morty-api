@@ -2,6 +2,7 @@ import { Switch, Route } from "react-router";
 import "./App.css";
 import Character from "./pages/Character/Character";
 import CharacterList from "./pages/Character-list/CharacterList";
+import Search from "./components/search/Search";
 
 function App() {
   return (
@@ -11,6 +12,9 @@ function App() {
       <Switch>
         <Route strict exact path="/">
           <CharacterList />
+        </Route>
+        <Route strict exact path="/search">
+          <Search />
         </Route>
         <Route strict exact path="/:id">
           <Character />
